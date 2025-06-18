@@ -44,7 +44,7 @@ dte-shortener/
 ## 🚀 Cómo levantar el proyecto
 
 ### Clonar proyecto 
-https://github.com/otrodev-diego/go-short-url.git
+https://github.com/otrodev-diego/go-short-url
 ### Construir Imagen
 docker-compose build
 ### Ejecutar contenedor
