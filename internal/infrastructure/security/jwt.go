@@ -7,6 +7,7 @@ import (
 
 var secretKey = []byte("tu_clave_secreta")
 
+// Crea un nuevo token JWT para un código de URL corta
 func GenerateToken(code string) (string, error) {
     token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
         "code": code,
@@ -15,6 +16,7 @@ func GenerateToken(code string) (string, error) {
     return token.SignedString(secretKey)
 }
 
+// Valida un token JWT y extrae el código
 func ValidateToken(tokenString string) (string, error) {
     token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
         return secretKey, nil

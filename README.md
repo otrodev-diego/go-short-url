@@ -46,9 +46,9 @@ dte-shortener/
 ### Clonar proyecto 
 https://github.com/otrodev-diego/go-short-url.git
 ### Construir Imagen
-docker build -t go-short-url .
+docker-compose build
 ### Ejecutar contenedor
-docker run -p 8081:8081 go-short-url
+docker-compose up
 #### el servicio estará disponible en http://localhost:8081/
 
 
@@ -73,4 +73,10 @@ curl -X POST http://localhost:8081/shorten \
 
 ```markdown
 curl -v -H "Authorization: Bearer TOKEN" http://localhost:8081/s/ABC123
+```
+
+## 📝 Test
+*Ejecutar el siguiente código*
+```markdown
+go test ./...
 ```
